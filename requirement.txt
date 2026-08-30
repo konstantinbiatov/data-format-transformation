@@ -1,0 +1,17 @@
+argparse
+shutil
+subprocess
+sys
+pathli
+cv2
+fitz
+numpy
+pytesseract
+qrcode
+PIL
+wave
+pypdf
+pdf2image
+json
+vosk 
+wave
