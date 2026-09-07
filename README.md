@@ -183,4 +183,47 @@ python document_to_qr_video.py file.pdf \
 A smaller `--chunk-size` produces more QR frames but gives better scanning reliability.
 
 
+###################################
 
+## Usage
+
+For a PDF:
+
+```bash
+python pdf_with_text_to_video.py \
+    document.pdf \
+    text.txt \
+    result.mp4 \
+    --model en_US-lessac-medium.onnx
+```
+
+For a DOCX:
+
+```bash
+python pdf_with_text_to_video.py \
+    document.docx \
+    text.txt \
+    result.mp4 \
+    --model en_US-lessac-medium.onnx
+```
+
+If Piper is not in the system `PATH`, specify its path:
+
+```bash
+python pdf_with_text_to_video.py \
+    document.pdf \
+    text.txt \
+    result.mp4 \
+    --piper /path/to/piper \
+    --model /path/to/en_US-lessac-medium.onnx
+```
+
+The text file must look like this:
+
+```text
+This is the narration for page one.
+This is the narration for page two.
+This is the narration for page three.
+```
+
+The first line is synchronized with page 1, the second line with page 2, and so on. Each page remains visible for the entire duration of its synthesized speech.
